@@ -6,7 +6,7 @@ CREATE TABLE Utilisateur (
     sexe VARCHAR(10),
     datedenaissance DATE
 );
-INSERT INTO User (nom, sexe, datedenaissance) VALUES
+INSERT INTO Utilisateur (nom, sexe, datedenaissance) VALUES
 ('Rojo', 'M', '1990-05-15');
 
 CREATE TABLE Categorie_culture (
@@ -36,7 +36,7 @@ CREATE TABLE Parcelle (
     utilisateur INTEGER REFERENCES Utilisateur(id_utilisateur),
     id_typeculture INTEGER REFERENCES Type_culture(id_typeculture)
 );
-INSERT INTO Parcelle (dimension, pieds, prix, user, id_typeculture) VALUES
+INSERT INTO Parcelle (dimension, pieds, prix, utilisateur, id_typeculture) VALUES
 (100.0, 500, 1500.0, 1, 1),
 
 CREATE TABLE Rendement (
