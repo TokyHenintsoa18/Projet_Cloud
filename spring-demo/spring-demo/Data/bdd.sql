@@ -11,12 +11,13 @@ INSERT INTO User (nom, sexe, datedenaissance) VALUES
 
 CREATE TABLE Categorie_culture (
     id_categorieculture SERIAL PRIMARY KEY,
+    nom_categorie VARCHAR(255),
     rendement_par_pied DECIMAL,
     prix_rendement DECIMAL
 );
 
-INSERT INTO Categorie_culture (rendement_par_pied, prix_rendement) VALUES
-(3.5, 25.0);
+INSERT INTO Categorie_culture (rendement_par_pied, nom_categorie, prix_rendement) VALUES
+(3.5,"Tsaramaso", 25.0);
 
 CREATE TABLE Type_culture (
     id_typeculture SERIAL PRIMARY KEY,
@@ -25,7 +26,7 @@ CREATE TABLE Type_culture (
 );
 
 INSERT INTO Type_culture (nom, id_categorieculture) VALUES
-('Vary', 1),
+('Potager', 1),
 
 CREATE TABLE Parcelle (
     id_parcelle SERIAL PRIMARY KEY,
