@@ -33,8 +33,9 @@ CREATE TABLE Parcelle (
 
 
 CREATE TABLE Rendement (
+    id_rendement SERIAL PRIMARY KEY,
     id_parcelle INTEGER REFERENCES Parcelle(id_parcelle),
     rendement_reel DECIMAL,
-    date DATE,
-    PRIMARY KEY (id_parcelle, date)
+    date DATE
 );
+
