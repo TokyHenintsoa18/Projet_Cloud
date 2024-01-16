@@ -9,15 +9,15 @@ CREATE TABLE Utilisateur (
 INSERT INTO Utilisateur (nom, sexe, datedenaissance) VALUES
 ('Rojo', 'M', '1990-05-15');
 
-CREATE TABLE Categorie_culture (
-    id_categorieculture SERIAL PRIMARY KEY,
-    nom_categorie VARCHAR(255),
-    rendement_par_pied DECIMAL,
-    prix_rendement DECIMAL
-);
+    CREATE TABLE Categorie_culture (
+        id_categorieculture SERIAL PRIMARY KEY,
+        nom_categorie VARCHAR(255),
+        rendement_par_pied DECIMAL,
+        prix_rendement DECIMAL
+    );
 
-INSERT INTO Categorie_culture (rendement_par_pied, nom_categorie, prix_rendement) VALUES
-(3.5,"Tsaramaso", 25.0);
+    INSERT INTO Categorie_culture (rendement_par_pied, nom_categorie, prix_rendement) VALUES
+    (3.5,"Tsaramaso", 25.0);
 
 CREATE TABLE Type_culture (
     id_typeculture SERIAL PRIMARY KEY,
